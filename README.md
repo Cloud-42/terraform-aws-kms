@@ -6,7 +6,7 @@ The following resources will be created:
  * Key alias.
 
 ## Dependencies and Prerequisites
- * Terraform v0.12. or higher
+ * Terraform v0.12+ or higher
  * AWS account
 
 ## Variables
