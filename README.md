@@ -12,7 +12,7 @@ The following resources will be created:
 ## Variables
 | Variable | Default | Meaning |
 | :------- | :----- | :----- |
-| `create`| Default: true | Whether to create the Key and alias or not |
+| `create`| true | Whether to create the Key and alias or not |
 | `description` || Key description |
 | `alias_name` || Alias name for the key. |  
 | `deletion_window_in_days` | 21 | Duration in days after which the key is permenently deleted |
