@@ -27,7 +27,7 @@ The following resources will be created:
  * Use to create a customer managed KMS Key & alias. 
  * **N.B.** 
    Note regarding KMS policy:-
-   If no policy is set AWS will usually assign a default policy to the key, granting access for the account root. In this case terraform will want to replace this polciy each time it runs, therefore it's preferential to manage the policy directly within Terraform, as below.
+   If no policy is set AWS will usually assign a default policy to the key, granting access for the account root. In this case terraform will want to replace this policy each time it runs, therefore it's preferential to manage the policy directly within Terraform, as below.
 
 To import the module add the following to the environment's TF file:
 ```
