@@ -40,35 +40,10 @@ The following resources will be created:
  * **N.B.** 
    Note regarding KMS policy:-
    If no policy is set AWS will usually assign a default policy to the key, granting access for the account root. In this case terraform will want to replace this policy each time it runs, therefore it's preferential to manage the policy directly within Terraform, as below.
+ * Example usage: <a href="https://github.com/Cloud-42/terraform-aws-kms/examples/main.tf" target="_blank" rel="Example">Example</a>
 
-To import the module add the following to the environment's TF file:
-```
-module "vpc" {
-  source = "git::https://github.com/Cloud-42/terraform-aws-kms.git"
-  
-  description = "My key alias"
-  alias_name  = "mykeyalias"
-  policy = <<POLICY
-{
-    "Version": "2012-10-17",
-    "Id": "1",
-    "Statement": [
-        {
-            "Sid": "Account Permissions",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::${var.account_id}:root"
-            },
-            "Action": "kms:*",
-            "Resource": "*"
-        }
-    ]
-}
-POLICY
-}
-```
+## Plan and apply
 * To initialise the module run: terraform init
 * To update the module run    : terraform get --update
 * To see a plan of changes    : terraform plan
 * To apply                    : terraform apply 
-
