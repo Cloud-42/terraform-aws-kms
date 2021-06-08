@@ -1,6 +1,6 @@
 variable "create" {
   description = "Create the key or not?"
-  default     = true 
+  default     = true
 }
 variable "description" {
   type        = string

@@ -7,7 +7,7 @@ module "kms" {
 
   description = "My CMK"
   alias_name  = "mykeyalias"
-  policy = <<POLICY
+  policy      = <<POLICY
 {
     "Version": "2012-10-17",
     "Id": "1",
